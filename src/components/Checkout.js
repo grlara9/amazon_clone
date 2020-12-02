@@ -11,6 +11,7 @@ const Checkout =()=>{
 
                 <div>
                     <h2 className="checkout__title">your shopping basket</h2>
+                    
                 </div>
             </div>
 
