@@ -38,9 +38,11 @@ const Header =()=>{
 
                 <div className="header__optionBasket">
                     <ShoppingBasketIcon />
+                    <Link to="/checkout">
                     <span className="header__optionLineTwo header__basketCount">
                         {state.basket.length}
                     </span>
+                    </Link>
                 </div>
 
             </div>
