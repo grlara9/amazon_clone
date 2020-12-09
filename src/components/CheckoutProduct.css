@@ -1,8 +1,7 @@
 .checkoutproduct{
     display: flex;
     padding: 20px;
-    background-color: yellow;
-    height: max-content;
+    margin: 20px 0px;
 }
 
 .checkoutproduct__info{
@@ -13,5 +12,16 @@
     background: #f0c14b;
     border: 1px solid;
     margin-top: 10px;
-    color: #111
+    color: #111;
+    padding: 2px;
+}
+
+.checkoutproduct__rating{
+    display: flex;
+}
+
+.checkoutproduct__image{
+    object-fit: contain;
+    width: 180px;
+    height: 180px;
 }
