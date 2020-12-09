@@ -19,7 +19,7 @@ const CheckoutProduct = ({id, title, price, image, rating, hideButton})=>{
             )
         }
         </div>
-           
+        <button>Remove from Basket</button>
         </div>
 
         </div>

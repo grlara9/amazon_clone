@@ -1,3 +1,17 @@
 .checkoutproduct{
     display: flex;
+    padding: 20px;
+    background-color: yellow;
+    height: max-content;
+}
+
+.checkoutproduct__info{
+    padding-left: 12px;
+}
+
+.checkoutproduct__info > button {
+    background: #f0c14b;
+    border: 1px solid;
+    margin-top: 10px;
+    color: #111
 }
