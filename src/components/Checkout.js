@@ -16,21 +16,6 @@ const Checkout =()=>{
                 <div>
                     <h2 className="checkout__title">your shopping basket</h2>
 
-                    <CheckoutProduct 
-                            id='12345'
-                            title='arriva mis pumas bolas de vergas ptos hhoho'
-                            image='https://images-na.ssl-images-amazon.com/images/I/816ctt5WV5L._AC_SX385_.jpg'
-                            price={199.99}
-                            rating={4}
-                        />
-
-<CheckoutProduct 
-                            id='12345'
-                            title='arriva mis pumas bolas de vergas ptos hhoho'
-                            image='https://images-na.ssl-images-amazon.com/images/I/816ctt5WV5L._AC_SX385_.jpg'
-                            price={199.99}
-                            rating={4}
-                        />
                         {basket.map(item => (
                          <CheckoutProduct 
                             id={item.id}
