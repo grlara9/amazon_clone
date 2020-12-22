@@ -5,20 +5,24 @@ import Header from './components/Header'
 import Home from './components/Home'
 import Checkout from './components/Checkout'
 import Login from './components/Login'
+import {auth} from './components/firebase'
+import {useStateValue} from './components/StateProvider'
 
 function App() {
 
+  const [{basket, user}, dispatch] = useStateValue();
+  
   useEffect(() => {
-  auth.onAuthStateChange((authUser)=>{
+  auth.onAuthStateChanged((authUser)=>{
     console.log("The user is ::", authUser)
 
     if(authUser){
-      dispatchEvent({
+      dispatch({
         type: "SET_USER",
         user: authUser,
       });
     } else{
-      dispatchEvent({
+      dispatch({
         type: "SET_USER",
         user: null
       });
