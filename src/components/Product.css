@@ -13,6 +13,11 @@
     
 }
 
+.product:hover{
+  transition: all .2s ease-in-out;
+  transform: scale(1.05);
+}
+
 .product > img{
     max-height: 200px;
   width: 100%;
