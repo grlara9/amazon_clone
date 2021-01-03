@@ -46,6 +46,7 @@ const Header =()=>{
                     <span className="header__optionLineTwo">Prime</span>
                 </div>
 
+
                 <div className="header__optionBasket">
                     <ShoppingCartIcon />
                     <Link to="/checkout">
