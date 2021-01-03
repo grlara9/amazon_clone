@@ -52,6 +52,12 @@
     border-color: #a88734 #9c7e31 #846a29;
     margin-top: 10px;
 }
+
+.login__button:hover{
+    background: #f3d078;
+    background: -webkit-linear-gradient(top, #f7dfa5, #f0c14b);
+    background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+}
 .register__button{
     margin-top: 20px;
     width: 100%;

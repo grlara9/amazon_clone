@@ -14,7 +14,7 @@
 }
 
 .product:hover{
-  transition: all .2s ease-in-out;
+  transition: all .1s ease-in-out;
   transform: scale(1.05);
 }
 
@@ -43,7 +43,11 @@
   background: -webkit-linear-gradient(top, #f7dfa5, #f0c14b);
   background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
 }
-
+ 
   .product__price {
     margin-top: 5px;
+  }
+
+  .product__rating{
+    display:flex;
   }
