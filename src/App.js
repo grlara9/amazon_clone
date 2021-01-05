@@ -51,7 +51,7 @@ function App() {
 
         <Route path="/payment">
           <Header />
-          <Payment />
+            <Payment />
           
         </Route>
         </Switch>
