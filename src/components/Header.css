@@ -52,7 +52,9 @@
     color:white;
     
   }
-  
+  .header__option:hover{
+    border: 1px white solid;
+  }
   
   .header__optionBasket {
     display: flex;
