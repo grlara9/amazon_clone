@@ -28,9 +28,37 @@ const Payment = ()=>{
          });
          setClientSecret(response.data.getClientSecret)
      }
+     getClientSecret();
     }, [basket])
-    const handleSubmit =(e)=>{
 
+
+    const handleSubmit =(e)=>{
+        event.preventDefault();
+        setProcessing(true);
+
+        const payload = await stripe.confirmCardPayment(clientSecret, {
+            payment_method: {
+                card: elements.getElement(CardElement)
+            }
+        }).then(({ paymentIntent }) => {
+            // paymentIntent = payment confirmation
+
+            db
+              .collection('users')
+              .doc(user?.uid)
+              .collection('orders')
+              .doc(paymentIntent.id)
+              .set({
+                  basket: basket,
+                  amount: paymentIntent.amount,
+                  created: paymentIntent.created
+              })
+
+            setSucceeded(true);
+            setError(null)
+            setProcessing(false)
+            history.replace('/orders')
+        })
     }
 
     const handleChange = event =>{
