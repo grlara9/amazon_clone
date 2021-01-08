@@ -6,6 +6,7 @@ import './payment.css'
 import { useStripe, useElements, CardElement} from '@stripe/react-stripe-js';
 import {getBasketTotal} from './reducer'
 import CurrencyFormat from 'react-currency-format'
+import axios from 'axios'
 
 
 const Payment = ()=>{
@@ -14,9 +15,20 @@ const Payment = ()=>{
     const stripe = useStripe();
     const elememts = useElements();
 
-
+    const [succeeded, setSucceeded] = useState(false)
+    const [processing, setProcessing]= useState("")
     const [error, setError] = useState('null');
     const [disabled, setDisabled] = useState(true)
+
+    useEffect(()=>{
+     //generate special stripe secret allows us to charge the user
+     const getClientSecret = async () => {
+         const response = await axios.post({
+            url: `/payments/create?total=${getBasketTotal(basket) * 100}`
+         });
+         setClientSecret(response.data.getClientSecret)
+     }
+    }, [basket])
     const handleSubmit =(e)=>{
 
     }
@@ -78,7 +90,7 @@ const Payment = ()=>{
                                         prefix={"$"}
                                     />
                                     <button disabled={processing ||disabled || succeeded}>
-                                        <span>{processing? <p>Processing</p>}</span>
+                                        <span>{processing? <p>Processing</p>: "Buy Now"}</span>
                                     </button>
                                 </div>
                         </form>
