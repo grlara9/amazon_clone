@@ -64,23 +64,24 @@ const Payment = ()=>{
                         <h3>payment method</h3>
                     </div>
                     <div className="payment__details">
-                                <form onSubmit={handleSubmit}>
-                                    <CardElement onChange={handleChange}/>
-
-                                    <div className="payment__container">
-                                        <CurrencyFormat 
-                                            renderText={(value)=>(
-                                                <h3>Order Total: {value}</h3>
-                                            )}
-
-                                            decimalScale={2}
-                                            value={getBasketTotal(basket)}
-                                            displayType={"text"}
-                                            thousandSeparator={true}
-                                            prefix={"$"}
-                                        />
-                                    </div>
-                                </form>
+                        <form onSubmit={handleSubmit}>
+                            <CardElement onChange={handleChange}/>
+                                <div className="payment__container">
+                                    <CurrencyFormat 
+                                        renderText={(value)=>(
+                                            <h3>Order Total: {value}</h3>
+                                        )}
+                                        decimalScale={2}
+                                        value={getBasketTotal(basket)}
+                                        displayType={"text"}
+                                        thousandSeparator={true}
+                                        prefix={"$"}
+                                    />
+                                    <button disabled={processing ||disabled || succeeded}>
+                                        <span>{processing? <p>Processing</p>}</span>
+                                    </button>
+                                </div>
+                        </form>
                     </div>
                 </div>
             </div>
