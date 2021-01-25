@@ -32,7 +32,7 @@ const Payment = ()=>{
     }, [basket])
 
 
-    const handleSubmit =(e)=>{
+    const handleSubmit = event =>{
         event.preventDefault();
         setProcessing(true);
 
