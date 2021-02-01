@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import {Link } from 'react-router-dom'
+import React, {useState, useEffect} from 'react'
+import {Link, useHistory } from 'react-router-dom'
 import CheckoutProduct from './CheckoutProduct'
 import {useStateValue} from './StateProvider'
 import './payment.css'
@@ -11,10 +11,11 @@ import axios from 'axios'
 
 const Payment = ()=>{
     const [{basket, user}, dispatch]= useStateValue();
-
+    const history =useHistory();
     const stripe = useStripe();
-    const elememts = useElements();
-
+    const elements = useElements();
+    const [clientSecret, setClientSecret] = useState(true)
+    
     const [succeeded, setSucceeded] = useState(false)
     const [processing, setProcessing]= useState("")
     const [error, setError] = useState('null');
@@ -32,7 +33,7 @@ const Payment = ()=>{
     }, [basket])
 
 
-    const handleSubmit = event =>{
+    const handleSubmit = async event =>{
         event.preventDefault();
         setProcessing(true);
 
@@ -43,16 +44,7 @@ const Payment = ()=>{
         }).then(({ paymentIntent }) => {
             // paymentIntent = payment confirmation
 
-            db
-              .collection('users')
-              .doc(user?.uid)
-              .collection('orders')
-              .doc(paymentIntent.id)
-              .set({
-                  basket: basket,
-                  amount: paymentIntent.amount,
-                  created: paymentIntent.created
-              })
+          
 
             setSucceeded(true);
             setError(null)
