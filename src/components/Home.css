@@ -18,3 +18,12 @@
     z-index: 1;
     margin: 0 5px;
 }
+
+@media only screen and (max-width: 600px){
+    .home__row{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-top: 10%;
+    }
+}
