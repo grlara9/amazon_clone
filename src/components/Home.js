@@ -10,7 +10,7 @@ const Home = ()=>{
         <div className="home">
             <div className="home__container">
                 <img className="home__image"
-                    src="https://images-na.ssl-images-amazon.com/images/G/01/US-hq/2020/img/Prime/XCM_Manual_1279892_1436048_US_gw_desk_tall_cozy_up_en_1x_revised_3506690_1500x600_en_US._CB416514924_.png"
+                    src="https://images-na.ssl-images-amazon.com/images/G/01/kindle/journeys/NDRiMzY4NTIt/NDRiMzY4NTIt-YTI0MDc5OWMt-w1500._CB659183649_.jpg"
                     alt=""
                 />
 

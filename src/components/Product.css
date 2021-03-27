@@ -19,15 +19,14 @@
 }
 
 .product > img{
-    max-height: 200px;
-  width: 100%;
-  object-fit: contain;
-  margin-bottom: 15px;
+  max-height: 200px;
+    object-fit: contain;
 }
 
 .product__info {
     height: 100px;
-    margin-bottom: 15px;
+    font-weight: 500;
+    margin-top: 5px;
   }
 
 .product > button {
@@ -50,6 +49,8 @@
 
   .product__rating{
     display:flex;
+    
+    
   }
 
   @media only screen and (max-width: 600px){
