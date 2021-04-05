@@ -22,14 +22,13 @@ const CheckoutProduct = ({id, title, price, image, rating, hideButton})=>{
                         <strong>{price}</strong>
                     </p>
                 <div className="checkoutproduct__rating">
-                    {Array(rating)
-                        .fill().map((_, i)=>(
-                            <p>*</p>
+                    {Array(rating).fill().map((_, i) =>(
+                    <p>⭐</p>
                     ))}
                 </div>
                  <button onClick={removeFromBasket}>Remove from Basket</button>
             </div>
-        </div>
+        </div> 
     )
 }
 export default CheckoutProduct
