@@ -18,15 +18,25 @@
   transform: scale(1.05);
 }
 
-.product > img{
-  max-height: 200px;
-    object-fit: contain;
+.img-container {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.img-container > img{
+  width: 100%;
+      object-fit: contain;
+      margin-bottom: 15px;
 }
 
 .product__info {
-    height: 100px;
-    font-weight: 500;
-    margin-top: 5px;
+  height: 100px;
+  margin-bottom: 15px;
+  align-self: flex-start;
+  padding-bottom: 50px;
+  font-weight: bold;
   }
 
 .product > button {
@@ -44,7 +54,9 @@
 }
  
   .product__price {
-    margin-top: 5px;
+    margin: 5px 0 0;
+      display: flex;
+      align-items: center;
   }
 
   .product__rating{
