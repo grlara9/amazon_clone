@@ -53,6 +53,14 @@ const Home = ()=>{
                         rating={4}
                         image="https://images-na.ssl-images-amazon.com/images/I/816ctt5WV5L._AC_SX385_.jpg"
                     />
+                     <Product 
+                        id="45678678"
+                        title="Funko Pop Animation Dragonball Orange Suit Goku and Flying Nimbus Exclusive Vinyl Figure"
+                        price={29.99}
+                        rating={5}
+                        image="https://images-na.ssl-images-amazon.com/images/I/71fg2-G%2Bv1L._AC_SL1325_.jpg"
+                    />
+                    
                 </div>
 
                 <div className="home__row">

@@ -36,6 +36,8 @@ const Product =({id, title, price, image, rating})=>{
             <img src={image} alt=""/>
             <button onClick={addToBasket}>Add to basket</button>
         </div>
+
+        
     );
 }
 export default Product
