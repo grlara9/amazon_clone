@@ -73,7 +73,7 @@ function Payment() {
             history.replace('/orders')
         })
 
-    }
+    } 
 
     const handleChange = event => {
         // Listen for changes in the CardElement

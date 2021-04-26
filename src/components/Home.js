@@ -60,16 +60,37 @@ const Home = ()=>{
                         rating={5}
                         image="https://images-na.ssl-images-amazon.com/images/I/71fg2-G%2Bv1L._AC_SL1325_.jpg"
                     />
-                    
+                     
                 </div>
 
                 <div className="home__row">
                     <Product 
-                        id="45678678"
+                        id="45678677"
                         title="Funko Pop Animation Dragonball Orange Suit Goku and Flying Nimbus Exclusive Vinyl Figure"
-                        price={29.99}
+                        price={69.99}
                         rating={5}
                         image="https://images-na.ssl-images-amazon.com/images/I/71fg2-G%2Bv1L._AC_SL1325_.jpg"
+                    />
+                     <Product 
+                        id="456786734"
+                        title="Pumas UNAM Away Soccer Men's Jersey 2019-20"
+                        price={99.99}
+                        rating={4}
+                        image="https://m.media-amazon.com/images/I/61FzEgGlA-L._AC_UL320_.jpg"
+                    />
+                     <Product 
+                        id="45678612"
+                        title="Funko Pop Animation Dragonball Orange Suit Goku and Flying Nimbus Exclusive Vinyl Figure"
+                        price={19.99}
+                        rating={5}
+                        image="https://images-na.ssl-images-amazon.com/images/I/71fg2-G%2Bv1L._AC_SL1325_.jpg"
+                    />
+                     <Product 
+                        id="45678678"
+                        title="adidas Men's Ultraboost 20 Sneaker"
+                        price={189.99}
+                        rating={5}
+                        image="https://m.media-amazon.com/images/I/71V0hCTMAML._AC_UL320_.jpg"
                     />
                 </div>
             </div>
